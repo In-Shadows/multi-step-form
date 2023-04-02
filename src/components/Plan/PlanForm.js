@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext } from "react";
 
 import "./PlanForm.scss";
 import PlanCard from "./PlanCard";

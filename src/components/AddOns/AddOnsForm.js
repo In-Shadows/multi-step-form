@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import "./AddOnsForm.scss";
 import Checkbox from "./Checkbox";
-import FormContext from "../../store/form-context";
 
 const addons = [
   {

@@ -2,7 +2,6 @@ import React, { useImperativeHandle, useRef } from "react";
 import { useState } from "react";
 
 import "./PersonalForm.scss";
-import FormContext from "../../store/form-context";
 
 const PersonalForm = React.forwardRef((props, ref) => {
   const nameInputRef = useRef();

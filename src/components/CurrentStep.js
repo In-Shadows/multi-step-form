@@ -1,4 +1,4 @@
-import React, { useState, useContext, useRef } from "react";
+import React, { useRef } from "react";
 
 import "./CurrentStep.scss";
 import StepDetails from "./StepDetails/StepDetails";
@@ -6,7 +6,6 @@ import PersonalForm from "./Personal/PersonalForm";
 import PlanForm from "./Plan/PlanForm";
 import AddOnsForm from "./AddOns/AddOnsForm";
 import Finish from "./Finish/Finish";
-import FormContext from "../store/form-context";
 import Icon from "../assets/images/icon-thank-you.svg";
 
 const CurrentStep = ({ step, nextStep, prevStep }) => {
