@@ -1,0 +1,50 @@
+@import "../../styles/variables";
+
+.form {
+  &__personal {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    border: none;
+  }
+
+  &__personal-input {
+    position: relative;
+
+    label.personal {
+      color: var(--color-marine-blue);
+      font-size: 1.5rem;
+      font-weight: 400;
+      display: inline-block;
+      margin-bottom: 0.8rem;
+    }
+
+    .error-text {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: var(--color-strawberry-red);
+      font-weight: 500;
+      display: inline-block;
+    }
+
+    input.personal {
+      outline: none;
+      width: 100%;
+      border-radius: 10px;
+      height: 5rem;
+      border: 1px solid var(--color-gray);
+      padding: 1.5rem;
+      color: var(--color-marine-blue);
+      font-weight: 500;
+    }
+
+    input.error {
+      border: 1px solid var(--color-strawberry-red);
+    }
+
+    input::placeholder {
+      color: var(--color-gray);
+    }
+  }
+}

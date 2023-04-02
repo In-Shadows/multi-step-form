@@ -1,0 +1,219 @@
+@import "../styles/variables";
+
+.current-step {
+  flex: 3;
+
+  @media only screen and (max-width: 50em) {
+    flex: 0;
+  }
+
+  .current-step__mobile {
+    @media only screen and (max-width: 50em) {
+      position: absolute;
+      top: 13.7%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--color-white);
+      border-radius: 10px;
+      padding: 3rem;
+      width: 95%;
+    }
+
+    @media only screen and (max-width: 28.125em) {
+      padding: 3rem 1.5rem;
+    }
+  }
+
+  & > div {
+    width: 85%;
+    margin-top: 3.5rem;
+
+    @media only screen and (max-width: 50em) {
+      width: 100%;
+    }
+  }
+
+  .form {
+    height: 31rem;
+    margin-bottom: 5.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+
+    @media only screen and (max-width: 50em) {
+      margin-bottom: 0;
+    }
+  }
+
+  .form:has(.slide-2.slide-active) {
+    @media only screen and (max-width: 50em) {
+      height: 46rem;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: 50em) {
+      background-color: var(--color-white);
+      padding: 2rem 3rem;
+    }
+  }
+
+  &__btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--color-white);
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+
+  &__btn--1 {
+    color: var(--color-gray);
+
+    &:hover,
+    &:active {
+      color: var(--color-marine-blue);
+    }
+  }
+
+  &__btn--2 {
+    color: var(--color-white);
+    background-color: var(--color-marine-blue);
+    padding: 1.5rem 3rem;
+    border-radius: 10px;
+    margin-left: auto;
+
+    &:hover,
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  &__btn--3 {
+    color: var(--color-white);
+    background-color: var(--color-purplish-blue);
+    padding: 1.5rem 3rem;
+    border-radius: 10px;
+    margin-left: auto;
+
+    &:hover,
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
+
+.success {
+  flex: 3;
+  height: min-content;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media only screen and (max-width: 50em) {
+    position: absolute;
+    top: 13.7%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-white);
+    border-radius: 10px;
+    padding: 3rem;
+    width: 95%;
+    justify-content: flex-start;
+    padding: 10rem 0;
+  }
+
+  &__icon {
+    margin-bottom: 3rem;
+  }
+
+  &__heading {
+    font-size: 3.2rem;
+    color: var(--color-marine-blue);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    color: var(--color-gray);
+    line-height: 1.6;
+    width: 80%;
+    text-align: center;
+
+    @media only screen and (max-width: 50em) {
+      width: 75%;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+.slide-1,
+.slide-2,
+.slide-3,
+.slide-4 {
+  position: absolute;
+  top: 0.7%;
+  left: 0.5%;
+  width: 99%;
+  transition: all 0.6s ease-in-out;
+  z-index: 10;
+}
+
+// slide 1 is active
+.form:has(.slide-1.slide-active) {
+  .slide-2 {
+    transform: translateX(105%);
+  }
+  .slide-3 {
+    transform: translateX(205%);
+  }
+  .slide-4 {
+    transform: translateX(305%);
+  }
+}
+
+// slide 2 is active
+.form:has(.slide-2.slide-active) {
+  .slide-1 {
+    transform: translateX(-105%);
+  }
+  .slide-3 {
+    transform: translateX(105%);
+  }
+  .slide-4 {
+    transform: translateX(205%);
+  }
+}
+
+// slide 3 is active
+.form:has(.slide-3.slide-active) {
+  .slide-1 {
+    transform: translateX(-205%);
+  }
+  .slide-2 {
+    transform: translateX(-105%);
+  }
+  .slide-4 {
+    transform: translateX(105%);
+  }
+}
+
+// slide 4 is active
+.form:has(.slide-4.slide-active) {
+  .slide-1 {
+    transform: translateX(-305%);
+  }
+  .slide-2 {
+    transform: translateX(-205%);
+  }
+  .slide-3 {
+    transform: translateX(-105%);
+  }
+}

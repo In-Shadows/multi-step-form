@@ -1,0 +1,30 @@
+@import "./variables";
+
+.container {
+  max-width: 100rem;
+  margin: 8rem auto 0;
+
+  @media only screen and (max-width: 50em) {
+    margin: 0 auto;
+  }
+}
+
+section {
+  background-color: var(--color-white);
+  padding: 1.5rem 3rem;
+
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+
+  @media only screen and (max-width: 50em) {
+    background-color: var(--color-magnolia);
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 0;
+    padding: 0;
+    position: relative;
+    height: 100vh;
+  }
+}

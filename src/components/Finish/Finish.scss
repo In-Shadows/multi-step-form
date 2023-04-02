@@ -1,0 +1,85 @@
+@import "../../styles/variables";
+
+.finish {
+  &__details {
+    background-color: var(--color-magnolia);
+    border-radius: 10px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  &__plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--color-light-gray);
+  }
+
+  &__plan__name {
+    p {
+      color: var(--color-marine-blue);
+      font-weight: 500;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .change-btn {
+      color: var(--color-gray);
+      background-color: var(--color-magnolia);
+      border: none;
+      border-bottom: 3px solid var(--color-gray);
+      outline: none;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .change-btn:hover {
+      color: var(--color-purplish-blue);
+      border-bottom: 3px solid var(--color-purplish-blue);
+    }
+  }
+
+  &__plan__price {
+    color: var(--color-marine-blue);
+    font-weight: 500;
+    font-size: 1.8rem;
+  }
+
+  &__services {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    p {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__name {
+      color: var(--color-gray);
+    }
+
+    &__price {
+      color: var(--color-marine-blue);
+    }
+  }
+
+  p:has(&__total) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+  }
+
+  &__total {
+    color: var(--color-gray);
+  }
+
+  &__total-price {
+    color: var(--color-purplish-blue);
+    font-size: 2rem;
+    font-weight: 800;
+  }
+}

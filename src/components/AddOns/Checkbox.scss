@@ -1,0 +1,65 @@
+@import "../../styles/variables";
+
+.form {
+  &__addons-input {
+    outline: 1px solid var(--color-light-gray);
+    border-radius: 10px;
+
+    &:hover {
+      outline: 2px solid var(--color-purplish-blue);
+    }
+  }
+
+  &__addons-input:has(input.addons:checked) {
+    outline: 2px solid var(--color-purplish-blue);
+  }
+
+  &__addons-input:has(input.addons:checked) img {
+    background-color: var(--color-purplish-blue);
+  }
+
+  label.addons {
+    width: 100%;
+    padding: 2rem;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__addons-img {
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 2rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      padding: 0.5rem;
+    }
+  }
+
+  &__addon-name {
+    font-size: 1.8rem;
+    color: var(--color-marine-blue);
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+  }
+
+  &__addon-description {
+    color: var(--color-gray);
+  }
+
+  &__addon-price {
+    font-weight: 500;
+    color: rgba(#473dff, 0.6);
+    margin-left: auto;
+  }
+
+  input.addons {
+    display: none;
+  }
+}

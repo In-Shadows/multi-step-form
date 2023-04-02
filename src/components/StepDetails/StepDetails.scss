@@ -1,0 +1,24 @@
+@import "../../styles/variables";
+
+.step {
+  &-heading {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-marine-blue);
+    margin-bottom: 1rem;
+  }
+
+  &-text {
+    color: var(--color-gray);
+    line-height: 1.6;
+
+    @media only screen and (max-width: 50em) {
+      width: 27rem;
+    }
+  }
+
+  &:has(&-heading) {
+    margin-bottom: 4rem;
+  }
+}

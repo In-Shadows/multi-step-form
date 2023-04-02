@@ -1,0 +1,83 @@
+@import "../../styles/variables";
+
+.form {
+  &__plan-input {
+    flex: 1;
+    border-radius: 10px;
+    outline: 1px solid var(--color-light-gray);
+    height: 17.4rem;
+    overflow: hidden;
+    transition: height 0.3s;
+
+    @media only screen and (max-width: 50em) {
+      flex: none;
+      height: 9rem;
+    }
+
+    &:hover {
+      outline: 2px solid var(--color-purplish-blue);
+    }
+
+    &:has(input.plan:checked) {
+      outline: 2px solid var(--color-purplish-blue);
+    }
+  }
+
+  &__plan-input.yearly {
+    height: 100%;
+
+    @media only screen and (max-width: 50em) {
+      height: 11rem;
+    }
+
+    label.plan {
+      @media only screen and (max-width: 50em) {
+        height: 11rem;
+      }
+    }
+  }
+
+  label.plan {
+    display: inline-block;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    cursor: pointer;
+
+    @media only screen and (max-width: 50em) {
+      display: flex;
+      overflow: hidden;
+      height: 8rem;
+      transition: all 0.3s;
+    }
+
+    img {
+      margin-bottom: 5rem;
+
+      @media only screen and (max-width: 50em) {
+        margin-bottom: 0;
+        margin-right: 3rem;
+      }
+    }
+  }
+
+  &__plan-name {
+    color: var(--color-marine-blue);
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 0.7rem;
+  }
+
+  &__plan-price {
+    color: var(--color-gray);
+  }
+
+  .yearly-text {
+    color: var(--color-marine-blue);
+    margin-top: 1.2rem;
+    font-size: 1.4rem;
+  }
+
+  input.plan {
+    display: none;
+  }
+}
